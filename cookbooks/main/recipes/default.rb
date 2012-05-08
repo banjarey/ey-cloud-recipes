@@ -8,7 +8,7 @@
 # require_recipe "sphinx"
 
 #uncomment to turn on memcached
-# require_recipe "memcached"
+require_recipe "memcached"
 
 #uncomment ot run the riak recipe
 # require_recipe "riak"
@@ -38,13 +38,13 @@
 #require_recipe "mongodb"
 
 #uncomment to run the resque recipe
-# require_recipe "resque"
+#require_recipe "resque"
 
 #uncomment to run the resque-scheduler recipe
 # require_recipe "resque-scheduler"
 
 #uncomment to run the redis recipe
-#require_recipe "redis"
+require_recipe "redis"
 
 #require_recipe "logrotate"
 #
@@ -80,7 +80,7 @@
 #require_recipe "newrelic_server_monitoring"
 
 #enable Extension modules for a given Postgresql database
-# if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
+if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
   # Extensions that support both Postgres 9.0 and 9.1
   # postgresql9_autoexplain "dbname"
   # postgresql9_btree_gin "dbname"
@@ -93,7 +93,7 @@
   # postgresql9_dict_xsyn "dbname"
   # postgresql9_earthdistance "dbname"
   # postgresql9_fuzzystrmatch "dbname"
-  # postgresql9_hstore "dbname"
+   postgresql9_hstore "dbname"
   # postgresql9_intarray "dbname"
   # postgresql9_isn "dbname"
   # postgresql9_lo "dbname"
@@ -101,7 +101,7 @@
   # postgresql9_pg_trgm "dbname"  
   # postgresql9_pgcrypto "dbname"
   # postgresql9_pgrowlocks "dbname"
-  # postgresql9_postgis "dbname"
+  postgresql9_postgis "dbname"
   # postgresql9_seg "dbname"
   # postgresql9_sslinfo "dbname"
   # postgresql9_tablefunc "dbname"
@@ -119,4 +119,4 @@
   # postgresql9_pg_freespacemap "postgres"
   # postgresql9_pg_stat_statements "todo" - Not done
   
-# end
+end
