@@ -41,10 +41,10 @@
 require_recipe "resque"
 
 #uncomment to run the resque-scheduler recipe
-require_recipe "resque-scheduler"
+#require_recipe "resque-scheduler"
 
 #uncomment to run the redis recipe
-#require_recipe "redis"
+require_recipe "redis"
 
 #require_recipe "logrotate"
 #
@@ -95,7 +95,7 @@ if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
   # postgresql9_dict_xsyn "dbname"
   # postgresql9_earthdistance "dbname"
   # postgresql9_fuzzystrmatch "dbname"
-   postgresql9_hstore "banjarey"
+    postgresql9_hstore "banjarey"
   # postgresql9_intarray "dbname"
   # postgresql9_isn "dbname"
   # postgresql9_lo "dbname"
