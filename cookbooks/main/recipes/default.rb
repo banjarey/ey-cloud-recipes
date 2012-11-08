@@ -46,6 +46,9 @@ require_recipe "resque"
 #uncomment to run the redis recipe
 require_recipe "redis"
 
+#Logentries recipe
+require_recipe 'le'
+
 #require_recipe "logrotate"
 #
 #uncomment to use the solr recipe
